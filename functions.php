@@ -8,7 +8,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 $timber = new \Timber\Timber();
 
-$files = ['context', 'custom-post-types', 'custom-roles', 'theme-assets', 'theme-features'];
+$files = ['filters', 'custom-post-types', 'custom-roles', 'theme-assets', 'theme-features'];
 foreach ($files as $file) {
     require_once __DIR__ . '/functions/' . $file . '.php';
 }
