@@ -1,1 +1,6 @@
-console.log('Page loaded !');
+
+jQuery(function ($) {
+
+  console.log('Page loaded with template ' + $('body').data('template') + '!');
+
+});
