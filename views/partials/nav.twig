@@ -30,6 +30,20 @@
                         </li>
                     {% endfor %}
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {% if user %}
+                        <li>
+                            <a href="{{ function('wp_logout_url') }}">Déconnexion</a>
+                        </li>
+                    {% else %}
+                        <li>
+                            <a href="{{ function('wp_login_url') }}">Connexion</a>
+                        </li>
+                        <li>
+                            <a href="{{ function('wp_registration_url') }}">S'enregistrer</a>
+                        </li>
+                    {% endif %}
+                </ul>
             </div><!--/.nav-collapse -->
         </div>
     </nav>
