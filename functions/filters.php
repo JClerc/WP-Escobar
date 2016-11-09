@@ -7,7 +7,14 @@ add_filter('timber_context', function ($context) {
 
 add_filter('get_twig', function ($twig) {
 
-    $twig->addFunction(new Twig_SimpleFunction('has_category', 'has_category'));
+    $twig->addFunction(new Twig_SimpleFunction('has_category', function ($post, $string) {
+        foreach ($post->get_categories() as $category) {
+            if ($category->slug === $string) {
+                return true;
+            }
+        }
+        return false;
+    }));
 
     $twig->addFunction(new Twig_SimpleFunction('debug', function ($obj) {
         var_dump($obj);
