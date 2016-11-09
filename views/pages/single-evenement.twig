@@ -1,0 +1,41 @@
+{% extends "layouts/base.twig" %}
+
+{% block layout 'single-evenement' %}
+
+{% block content %}
+
+    <div class="content-wrapper">
+        <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+            <section class="article-content">
+                <h1 class="article-h1">{{post.title}}</h1>
+
+                <h5>Date: {{post.get_field('date')}}</h5>
+                <h5>Heure: {{post.get_field('heure')}}h{{post.get_field('minute')}}</h5>
+                <h5>Lieu: {{post.get_field('lieu')|print_r}}</h5>
+
+                <p class="blog-author">
+                    <span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> {{ post.post_date|date}}
+                </p>
+
+                <div class="article-body">
+                    {{post.content}}
+                </div>
+            </section>
+        {% if post.comment_status != 'closed' %}
+            <section class="comments">
+                <div class="respond">
+                    <h3 class="h2">Comments</h3>
+                    {{ comment_form }}
+                </div>
+                <div class="responses">
+                    {% for cmt in post.get_comments() %}
+                        {% include "partials/comment.twig" with {comment:cmt} %}
+                    {% endfor %}
+                </div>
+
+            </section>
+            {% endif %}
+        </article>
+    </div> <!-- /content-wrapper -->
+
+{% endblock %}

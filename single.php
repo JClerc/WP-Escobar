@@ -6,8 +6,15 @@ $context['post'] = $post;
 $context['wp_title'] .= ' - ' . $post->title();
 $context['comment_form'] = TimberHelper::get_comment_form();
 
-Timber::render([
+$templates = [];
+foreach ($post->get_categories() as $category) {
+    $templates[] = 'pages/single-' . $category->slug . '.twig';
+}
+
+$templates += [
     'pages/single-' . $post->ID . '.twig',
     'pages/single-' . $post->post_type . '.twig',
     'pages/single.twig'
-], $context);
+];
+
+Timber::render($templates, $context);
