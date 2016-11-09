@@ -1,0 +1,15 @@
+{% extends "layouts/base.twig" %}
+
+{% block layout 'contact' %}
+
+{% block content %}
+
+    {% set location = post.get_field('lieu') %}
+
+    <h2>{{post.title}}</h2>
+
+    <p>Google Map: {{location.address}}, {{location.lat}}, {{location.lng}}</p>
+
+    <p>{{post.content}}</p>
+
+{% endblock %}
