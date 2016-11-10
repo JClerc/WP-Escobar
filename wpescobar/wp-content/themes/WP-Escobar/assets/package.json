@@ -1,0 +1,34 @@
+{
+  "name": "wpescobar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "node ./node_modules/gulp/bin/gulp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JClerc/WP-Escobar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JClerc/WP-Escobar/issues"
+  },
+  "homepage": "https://github.com/JClerc/WP-Escobar#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.16.0",
+    "browser-sync": "^2.17.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sass-glob": "^1.0.6",
+    "gulp-sourcemaps": "^2.0.1",
+    "gulp-uglify": "^2.0.0"
+  }
+}
