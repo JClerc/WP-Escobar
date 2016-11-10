@@ -1,0 +1,15 @@
+{% extends "layouts/base.twig" %}
+
+{% block layout 'home' %}
+
+{% block content %}
+
+    <h2>{{post.title}}</h2>
+
+    <p>{{post.content}}</p>
+
+    <p><b>{{post.get_field('texte_bouton_1')}}</b></p>
+
+    <p><b>{{post.get_field('texte_bouton_2')}}</b></p>
+
+{% endblock %}
