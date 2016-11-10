@@ -16,5 +16,9 @@ Create a new mysql database named "wpescobar" using charset "utf8mb4_unicode_ci"
 #### 3. Composer
 Move to directory `wpescobar/wp-content/themes/WP-Escobar`, and run command `composer install` to fetch dependencies.
 
-#### 4. Start webserver
+#### 4. NPM install
+Move to directory `wpescobar/wp-content/themes/WP-Escobar/assets`, and run command `npm install` to fetch dependencies.
+Then run `gulp` to make assets.
+
+#### 5. Start webserver
 It should work now, don't forget to commit & push often!
