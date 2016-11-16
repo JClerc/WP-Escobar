@@ -4,18 +4,23 @@
 
 {% block content %}
 
-    <h2>{{post.title}}</h2>
+    <div class="blog_container">
 
-    {% for post in posts %}
+        <h2>{{post.title}}</h2>
 
-        {% if has_category(post, 'evenement') %}
-            {% include ['partials/tease-event.twig'] %}
-        {% elseif has_category(post, 'actualite') %}
-            {% include ['partials/tease-news.twig'] %}
-        {% else %}
-            {% include ['partials/tease.twig'] %}
-        {% endif %}
+        {% for post in posts %}
 
-    {% endfor %}
+            {% if has_category(post, 'evenement') %}
+                {% include ['partials/tease-event.twig'] %}
+            {% elseif has_category(post, 'actualite') %}
+                {% include ['partials/tease-news.twig'] %}
+            {% else %}
+                {% include ['partials/tease.twig'] %}
+            {% endif %}
+
+        {% endfor %}
+
+    </div>
+
 
 {% endblock %}

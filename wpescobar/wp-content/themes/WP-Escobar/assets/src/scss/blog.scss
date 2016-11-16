@@ -1,0 +1,32 @@
+body.page-template-blog {
+  background-image: url(../images/actu_bg.jpg);
+  background-size: cover;
+}
+.blog_container {
+  height: calc(100vh - 70px);
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFFFFF;
+
+  article {
+
+    @include card();
+
+    .col-md-6 {
+      width: 100%;
+    }
+
+    .col-md-6 p,
+    .col-md-6 h5,
+    .col-md-6 h2 {
+      color: #ffffff
+    }
+
+  }
+
+  h2 a {
+    color: #FFFFFF;
+  }
+}

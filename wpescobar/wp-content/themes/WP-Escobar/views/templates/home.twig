@@ -4,12 +4,18 @@
 
 {% block content %}
 
+<div class="home_container">
+
+    <h5>{{post.description}}</h5>
     <h2>{{post.title}}</h2>
 
-    <p>{{post.content}}</p>
+    <div class="btns">
 
-    <p><b>{{post.get_field('texte_bouton_1')}}</b></p>
+        <a href="{{post.get_field('url_bouton_1')}}" class="home_btn">{{post.get_field('texte_bouton_1')}}</a>
+        <a href="{{post.get_field('url_bouton_2')}}" class="home_btn">{{post.get_field('texte_bouton_2')}}</a>
 
-    <p><b>{{post.get_field('texte_bouton_2')}}</b></p>
+    </div>
+
+</div>
 
 {% endblock %}

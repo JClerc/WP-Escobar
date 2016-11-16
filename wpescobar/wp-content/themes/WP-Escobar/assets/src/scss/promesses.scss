@@ -1,0 +1,28 @@
+body.post-type-archive-promesse {
+  background-image: url(../images/promesses_bg.jpg);
+  background-size: cover;
+}
+.tease-promesse p.content {
+  text-align: left;
+  padding: 20px;
+}
+
+.tease-promesse {
+  @include card();
+
+  line-height     : 1.5;
+
+  a:hover {
+    color: #000000;
+  }
+
+  .content span {
+    font-size: 1vw;
+  }
+
+}
+
+.tease-promesse h2 a {
+  text-align: left;
+  color: white;
+}

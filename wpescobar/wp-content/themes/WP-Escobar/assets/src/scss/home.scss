@@ -1,0 +1,65 @@
+.container {
+  width: 100%;
+}
+
+body.page-template-home {
+  background-image : url(../images/home_bg.jpg);
+  background-size  : cover;
+  background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.home_container {
+  color          : #FFFFFF;
+  height         : calc(100vh - 70px);
+  display        : flex;
+  width          : 100vw;
+  overflow       : scroll;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: center;
+
+  h2 {
+    font-family: "abodoniNovaBoldIta", sans-serif;
+    font-size  : 4vw;
+  }
+
+}
+
+.home_btn {
+  display: inline-block;
+  color  : #FFFFFF;
+
+  &:hover {
+    background-color   : rgba(0, 0, 0, 0.33);
+    transition-duration: 0.3s;
+  }
+}
+
+.btns {
+  display        : flex;
+  width          : 42%;
+  margin-top     : 50px;
+  -ms-flex-pack  : center;
+  justify-content: space-around;
+}
+
+.home_container .btns a {
+  font-family    : "GothamBold", sans-serif;
+  display        : flex;
+  align-items    : center;
+  border         : 1px solid #FFFFFF;
+  width          : 11vw;
+  justify-content: center;
+  text-align     : center;
+  height         : 50px;
+}
+
+a:hover,
+a:focus {
+  color          : #EEEEEE;
+  text-decoration: underline;
+}

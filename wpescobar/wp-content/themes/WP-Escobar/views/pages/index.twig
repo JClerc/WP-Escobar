@@ -3,10 +3,11 @@
 {% block layout 'index' %}
 
 {% block content %}
-	<h2>{{foo}}</h2>
-	<p>{{qux}}</p>
+
+	<div class="row">
 	{% for post in posts %}
 		{% include ['partials/tease-'~post.post_type~'.twig', 'partials/tease.twig'] %}
 	{% endfor %}
+	</div>
 
 {% endblock %}

@@ -1,0 +1,24 @@
+@mixin card() {
+  background-color: rgba(0, 0, 0, 0.5);
+  color           : #E4E4E4;
+  width           : 60%;
+  padding         : 10px;
+  margin-bottom   : 30px;
+  span.tease_title,
+  span.date {
+    vertical-align: middle;
+  }
+
+  span.tease_title {
+    font-size: 36px;
+  }
+
+  h2 {
+    color: #E4E4E4;
+    font-size: 1vw;
+    a:hover {
+      color: #000000;
+    }
+  }
+
+}

@@ -1,0 +1,46 @@
+body.post-type-archive-temoignage {
+  background-image: url(../images/temoignages_bg.jpg);
+  background-size: cover;
+}
+
+.row {
+  text-align    : center;
+  height        : calc(100vh - 140px);
+  width         : 100%;
+  display       : flex;
+  margin-top    : 20px;
+  flex-direction: column;
+  align-items   : center;
+}
+
+.tease-temoignage {
+  @include card();
+  font-family     : "palatinoBoldItalic";
+  display         : inline-block;
+  position        : relative;
+  min-height      : 180px;
+
+  a {
+    color: #FFFFFF;
+  }
+
+}
+
+p.date {
+  position: absolute;
+  left    : calc(75% - 10px);
+  bottom  : 0;
+}
+
+.wrapper {
+  height     : calc(100vh - 70px);
+  width      : 100%;
+  overflow   : scroll;
+  display    : flex;
+  align-items: center;
+}
+
+.col-md-6,
+.col-md-6 a {
+  color: black;
+}

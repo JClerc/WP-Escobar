@@ -1,0 +1,86 @@
+.navbar {
+  background-color: #000000;
+  height          : 70px;
+  color           : #FFFFFF;
+  border          : none;
+  margin          : 0px;
+  .container {
+    display      : flex;
+    align-content: center;
+    .collapse {
+      height     : 70px;
+      font-family: "GothamBold";
+      display: flex;
+      align-items: center;
+    }
+  }
+  .navbar-header {
+    height: 70px;
+  }
+  .navbar-header .navbar-brand {
+    color: white;
+  }
+
+  .navbar-nav li a {
+    color         : white;
+    padding-top   : 35px;
+    padding-bottom: 35px;
+  }
+
+  .navbar-nav .active a,
+  .navbar-nav .active a:hover,
+  .navbar-nav .active a:focus {
+    color           : gray;
+    background-color: transparent;
+  }
+
+  .navbar-default .navbar-nav li a:hover,
+  .navbar-default .navbar-nav li a:focus {
+    color           : #333;
+    background-color: transparent;
+  }
+
+}
+
+
+@media (max-width: 990px) {
+
+  .navbar-toggle:focus #navbar{
+    display: block!important;
+    background-color: red;
+  }
+
+  .navbar-header {
+    float: none;
+  }
+
+  .navbar .container {
+    display: block;
+  }
+
+  .navbar .container .collapse {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+
+  .navbar-nav {
+    float: none!important;
+    margin: 7.5px -15px;
+  }
+
+  .navbar-nav li {
+    float: none;
+  }
+
+  .navbar-nav li a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
