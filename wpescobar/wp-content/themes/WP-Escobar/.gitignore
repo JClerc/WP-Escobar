@@ -2,5 +2,4 @@
 vendor/
 
 # Ignore other directories
-wordpress/
 .idea/
