@@ -48,9 +48,9 @@ gulp.task('style', () => {
 
 // Image compressor
 gulp.task('image', () => {
-  gulp.src('src/img/**/*')
+  gulp.src('src/images/**/*')
   .pipe(imagemin())
-  .pipe(gulp.dest('dist/img/'));
+  .pipe(gulp.dest('dist/images/'));
 });
 
 // Media files
