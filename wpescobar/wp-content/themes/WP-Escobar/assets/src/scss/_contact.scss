@@ -5,6 +5,9 @@ body.page-template-contact {
   background-image: url(../images/contact_bg.jpg);
   background-size : cover;
   .wrapper {
+    h2 {
+      color: #FFFFFF;
+    }
     flex-direction: column;
     p {
       color: #FFFFFF;

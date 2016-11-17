@@ -6,12 +6,12 @@
 
     {% set location = post.get_field('lieu') %}
 
+    <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBImy0ia-fa4Dx8TDop4U6DnESFOErpzWY&q={{location.address}}&center={{location.lat}}, {{location.lng}}" allowfullscreen></iframe>
+
+
     <h2>{{post.title}}</h2>
 
     <p>Google Map: {{location.address}}, {{location.lat}}, {{location.lng}}</p>
-
-
-    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBImy0ia-fa4Dx8TDop4U6DnESFOErpzWY&q={{location.address}}&center={{location.lat}}, {{location.lng}}" allowfullscreen></iframe>
 
     <p>{{post.content}}</p>
 
