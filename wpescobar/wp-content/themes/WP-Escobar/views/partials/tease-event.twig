@@ -1,12 +1,11 @@
 <article class="tease tease-{{post.post_type}}" id="tease-{{post.ID}}">
 	{% block content %}
         <div class="col-md-6">
+            <div class="event_information">
+                <h5 class="date">{{post.published_at|date("d") }}</h5>
+                <h5 class="date">{{post.published_at|date("F") }}</h5>
+            </div>
             <h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
-
-            <h5>Date: {{post.get_field('date')}}</h5>
-            <h5>Heure: {{post.get_field('heure')}}h{{post.get_field('minute')}}</h5>
-            <h5>Lieu: {{post.get_field('lieu')['address']|print_r}}</h5>
-
             <p>{{post.get_preview}}</p>
             {% if post.get_thumbnail %}
                 <img src="{{post.thumbnail.src}}" />

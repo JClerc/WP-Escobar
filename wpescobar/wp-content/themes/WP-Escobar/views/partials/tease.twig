@@ -1,10 +1,10 @@
 <article class="tease tease-{{post.post_type}}" id="tease-{{post.ID}}">
 	{% block content %}
 		<div>
-			<span class="tease_title">{{post.title}} </span>
+			<a href="{{post.link}}"><span class="tease_title">{{post.title}} </span></a>
 			<span class="date">{{post.get_date}}</span>
 		</div>
-		<h2><a href="{{post.link}}"><p class="content">{{post.post_content}}</p></a></h2>
+		<h2><p class="content">{{post.post_content}}</p></h2>
 
 			{% if post.get_thumbnail %}
 				<img src="{{post.thumbnail.src}}" />

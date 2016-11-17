@@ -1,21 +1,33 @@
 body.page-template-blog {
-  background-image: url(../images/actu_bg.jpg);
-  background-size: cover;
+  background-image: url(../images/left.jpg);
+  background-size : cover;
 }
 .blog_container {
-  height: calc(100vh - 70px);
-  overflow: scroll;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #FFFFFF;
+  height          : calc(100vh - 70px);
+  background-color: rgba(0, 0, 0, 0.65);
+  overflow        : scroll;
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  color           : #FFFFFF;
 
   article {
 
     @include card();
 
     .col-md-6 {
-      width: 100%;
+      width   : 100%;
+
+      .event_information {
+        position        : absolute;
+        border-radius   : 4px;
+        padding         : 3px;
+        text-align      : center;
+        top             : -22px;
+        left            : 80%;
+        background-color: red;
+      }
+
     }
 
     .col-md-6 p,
@@ -27,6 +39,7 @@ body.page-template-blog {
   }
 
   h2 a {
-    color: #FFFFFF;
+    color    : #FFFFFF;
+    font-size: 24px;
   }
 }

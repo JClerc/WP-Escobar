@@ -12,8 +12,12 @@ body.post-type-archive-promesse {
 
   line-height     : 1.5;
 
+  a {
+    color: #FFFFFF;
+  }
+
   a:hover {
-    color: #000000;
+    color: gray;
   }
 
   .content span {

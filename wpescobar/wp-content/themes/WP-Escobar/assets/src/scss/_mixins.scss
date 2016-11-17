@@ -1,8 +1,9 @@
 @mixin card() {
   background-color: rgba(0, 0, 0, 0.5);
   color           : #E4E4E4;
+  position        : relative;
   width           : 60%;
-  padding         : 10px;
+  padding         : 0 20px;
   margin-bottom   : 30px;
   span.tease_title,
   span.date {
@@ -13,11 +14,17 @@
     font-size: 36px;
   }
 
+  a.read-more {
+    position: absolute;
+    bottom  : 5px;
+    right   : 10px;
+  }
+
   h2 {
     color: #E4E4E4;
     font-size: 1vw;
     a:hover {
-      color: #000000;
+      color: gray;
     }
   }
 
